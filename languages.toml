@@ -1,0 +1,11 @@
+[[language]]
+name = "loco"
+scope = "source.loco"
+injection-regex = "loco"
+file-types = ["loco"]
+comment-token = "//"
+indent = { tab-width = 4, unit = "\t" }
+
+[[grammar]]
+name = "loco"
+source = { git = "https://github.com/loco-lang/tree-sitter-loco", rev = "main" }

@@ -1,0 +1,24 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate languages.toml
+        run: |
+          python3 -c "
+          import tomllib
+          with open('languages.toml', 'rb') as f:
+              tomllib.load(f)
+          print('languages.toml valid')
+          "
+      - name: Check query files
+        run: |
+          ls runtime/queries/rail/*.scm
