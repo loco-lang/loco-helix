@@ -1,3 +1,6 @@
+[![CI](https://github.com/loco-lang/loco-helix/actions/workflows/ci.yml/badge.svg)](https://github.com/loco-lang/loco-helix/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 # Loco for Helix
 
 Loco language support for the [Helix editor](https://helix-editor.com).
