@@ -21,4 +21,4 @@ jobs:
           "
       - name: Check query files
         run: |
-          ls runtime/queries/rail/*.scm
+          ls runtime/queries/loco/*.scm
