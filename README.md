@@ -1,25 +1,16 @@
-[![CI](https://github.com/loco-lang/loco-helix/actions/workflows/ci.yml/badge.svg)](https://github.com/loco-lang/loco-helix/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+# loco-helix
 
-# Loco for Helix
+Helix editor configuration for the [Loco](https://github.com/loco-lang/loco) programming language.
 
-Loco language support for the [Helix editor](https://helix-editor.com).
+**This is a mirror repo.** The canonical source is maintained in
+[tree-sitter-loco/editors/helix](https://github.com/loco-lang/tree-sitter-loco/tree/main/editors/helix).
 
-## Features
-
-- Syntax highlighting
-- Code folding
-- Symbol outline / navigation
-- Text object selections
-- Scope-aware highlighting
+To update: submit changes to `tree-sitter-loco/editors/helix/`, and they will be synced here.
 
 ## Installation
 
-### With the tree-sitter grammar auto-download
-
-Add this to your `~/.config/helix/languages.toml`:
-
 ```toml
+# ~/.config/helix/languages.toml
 [[language]]
 name = "loco"
 scope = "source.loco"
@@ -32,19 +23,4 @@ name = "loco"
 source = { git = "https://github.com/loco-lang/tree-sitter-loco", rev = "main" }
 ```
 
-### Manual query files
-
-If you prefer to use the query files directly:
-
-```bash
-cp -r runtime/* ~/.config/helix/runtime/
-```
-
-## Updating queries
-
-The `.scm` query files here are sourced from [tree-sitter-loco](https://github.com/loco-lang/tree-sitter-loco/queries/).
-To update, copy the latest from that repo.
-
-## License
-
-MIT
+Copy query files to `~/.config/helix/runtime/queries/loco/`.
